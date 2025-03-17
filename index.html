@@ -2,18 +2,22 @@
 <html data-wf-domain="criativa.com" data-wf-page="66e02a5daed50bb4037fa01a" data-wf-site="66e02a5daed50bb4037fa02f" lang="en" data-wf-locale="en" class="w-mod-js wf-intertight-n3-active wf-intertight-n5-active wf-intertight-n9-active wf-intertight-n4-active wf-intertight-n8-active wf-intertight-n6-active wf-intertight-n7-active wf-active w-mod-js w-mod-ix">
   <head>
      <style>
-    .wf-force-outline-none[tabindex="-1"]:focus{outline:none;}
-    .home-hero-photos-scroll {
-    display: flex; /* Mantém as imagens alinhadas na horizontal */
-    overflow: hidden; /* Esconde qualquer imagem que ultrapasse a tela */
-    width: 100vw; /* Usa toda a largura da tela */
-    height: auto; /* Ajusta a altura automaticamente */
+    .home-hero-photos-container {
+    overflow: hidden; /* Impede cortes nas imagens */
+    width: 100vw; /* Mantém a largura total da tela */
+}
+
+.home-hero-photos-scroll {
+    display: flex;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    transition: transform 1s ease-in-out;
 }
 
 .home-hero-photos-scroll img {
-    min-width: 100%; /* Garante que cada imagem ocupe toda a largura */
+    width: 100vw; /* Mantém cada imagem com largura total da tela */
     height: auto; /* Mantém a proporção */
-    object-fit: cover; /* Evita cortes na imagem */
+    flex-shrink: 0; /* Impede que as imagens encolham */
 }
     </style>
     <meta charset="utf-8">
@@ -369,7 +373,7 @@
             imagesContainer.style.transform = `translateX(${offset}%)`;
         }
 
-        setInterval(moveCarousel, 3000); // Muda a imagem a cada 3 segundos
+        setInterval(moveCarousel, 1500); // Agora as imagens trocam a cada 1.5 segundos
     });
 </script>       
   </body>
