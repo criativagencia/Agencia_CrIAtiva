@@ -3,12 +3,18 @@
   <head>
      <style>
     .wf-force-outline-none[tabindex="-1"]:focus{outline:none;}
+    /* Bloqueia rolagem lateral */
+html, body {
+    overflow-x: hidden;
+    max-width: 100vw;
+    touch-action: pan-y; /* Permite rolagem apenas para cima e para baixo */
+}
     </style>
     <meta charset="utf-8">
     <title>
       CrIAtiva | Imagens Criadas Por Inteligêcias Artificias
     </title>
-    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <meta content="Webflow" name="generator">
     <link href="https://cdn.prod.website-files.com/66e02a5daed50bb4037fa02f/css/marinie.webflow.6dc5e3b04.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com" rel="preconnect">
@@ -333,7 +339,7 @@
           }
           const offset = -currentIndex * 100 / images.length; // Move 100% por vez com base no número de imagens
           imagesContainer.style.transition = 'transform 1s ease';
-          imagesContainer.style.transform = `translateX(${offset}%)`;
+          imagesContainer.style.transform = translateX(${offset}%);
         }
 
         // Configura para mover a cada 1 segundos
@@ -342,4 +348,3 @@
     </script>
   </body>
 </html>
-
