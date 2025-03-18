@@ -5,12 +5,13 @@
   <meta content="width=device-width, initial-scale=1" name="viewport">
   <title>CrIAtiva | Imagens Criadas Por Inteligências Artificiais</title>
   <style>
-    /* Impede rolagem lateral da página */
+    /* Bloqueio de rolagem lateral */
     body {
       margin: 0;
       font-family: 'Inter Tight', sans-serif;
       font-weight: 400;
       overflow-x: hidden; /* Impede rolagem lateral */
+      padding-bottom: 80px; /* Espaço para o rodapé fixo */
     }
 
     /* Cabeçalho */
@@ -89,7 +90,7 @@
       100% { transform: translateX(-100%); }
     }
 
-    /* Animação para os textos "Envie uma Mensagem" */
+    /* Animação para os textos "Envie uma Mensagem" no rodapé */
     .feedbacks-headline-loop-container {
       display: inline-flex;
       animation: loopText 20s linear infinite;
@@ -165,6 +166,20 @@
 
     .services-table tr:nth-child(even) {
       background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    /* Rodapé fixo com carrossel */
+    .footer {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background-color: #fff;
+      padding: 20px;
+      box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .footer .feedbacks-headline-loop-container {
+      justify-content: center;
     }
 
     /* Responsividade */
@@ -288,21 +303,16 @@
     </div>
   </section>
 
-  <!-- Animação de texto -->
+  <!-- Animação de texto no rodapé -->
   <section class="section-feedbacks">
-    <div class="feedbacks-headline-loop-mask">
+    <div class="footer">
       <div class="feedbacks-headline-loop-container">
-        <div class="feedbacks-headline-group">
-          <h3 class="feedbacks-headline-text">Envie uma Mensagem</h3>
-        </div>
-        <div class="feedbacks-headline-group">
-          <h3 class="feedbacks-headline-text">Envie uma Mensagem</h3>
-        </div>
-        <div class="feedbacks-headline-group">
-          <h3 class="feedbacks-headline-text">Envie uma Mensagem</h3>
-        </div>
+        <h3 class="feedbacks-headline-text">Envie uma Mensagem</h3>
+        <h3 class="feedbacks-headline-text">Envie uma Mensagem</h3>
+        <h3 class="feedbacks-headline-text">Envie uma Mensagem</h3>
       </div>
     </div>
   </section>
+  
 </body>
 </html>
