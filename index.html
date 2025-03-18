@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
   <title>CrIAtiva | Imagens Criadas Por Inteligências Artificiais</title>
   <style>
+    /* Impede rolagem lateral da página */
     body {
       margin: 0;
       font-family: 'Inter Tight', sans-serif;
@@ -67,7 +68,7 @@
     /* Carrossel de Imagens */
     .home-hero-photos-container {
       overflow: hidden;
-      width: 100vw;
+      width: 100%;
       margin-top: 80px;
     }
 
@@ -77,8 +78,8 @@
     }
 
     .home-hero-photos-scroll img {
-      width: 100vw;
-      height: 50vh;
+      width: 33vw; /* Ajustando o tamanho das imagens */
+      height: auto;
       object-fit: cover;
       flex-shrink: 0;
     }
@@ -114,13 +115,13 @@
 
     .home-about-grid {
       display: flex;
-      gap: 20px;
+      gap: 10px;
       flex-wrap: wrap;
       justify-content: space-between;
     }
 
     .home-about-photos img {
-      width: 100%;
+      width: 32%; /* Ajustando as imagens para ficarem pequenas */
       height: auto;
       object-fit: cover;
       border-radius: 5px;
