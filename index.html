@@ -10,7 +10,7 @@
       margin: 0;
       font-family: 'Inter Tight', sans-serif;
       font-weight: 400;
-      overflow-x: hidden;
+      overflow-x: hidden; /* Impede rolagem lateral */
     }
 
     /* Cabeçalho */
@@ -78,7 +78,7 @@
     }
 
     .home-hero-photos-scroll img {
-      width: 33vw;
+      width: 33vw; /* Ajustando o tamanho das imagens */
       height: auto;
       object-fit: cover;
       flex-shrink: 0;
@@ -87,6 +87,24 @@
     @keyframes carrossel {
       0% { transform: translateX(0); }
       100% { transform: translateX(-100%); }
+    }
+
+    /* Animação para os textos "Envie uma Mensagem" */
+    .feedbacks-headline-loop-container {
+      display: inline-flex;
+      animation: loopText 20s linear infinite;
+    }
+
+    @keyframes loopText {
+      0% { transform: translateX(100%); }
+      100% { transform: translateX(-100%); }
+    }
+
+    .feedbacks-headline-text {
+      padding-right: 40px;
+      font-size: 24px;
+      font-weight: bold;
+      color: #000;
     }
 
     /* Seção das 6 Imagens */
@@ -103,7 +121,7 @@
     }
 
     .home-about-photos img {
-      width: 32%;
+      width: 32%; /* Ajustando as imagens para ficarem pequenas */
       height: auto;
       object-fit: cover;
       border-radius: 5px;
@@ -203,12 +221,12 @@
   <!-- Carrossel de Imagens -->
   <section class="home-hero-photos-container">
     <div class="home-hero-photos-scroll">
-      <img src="https://app.clicopy.com.br/uploads/image-1742085724891-143950c3-de50-4c5e-b64d-6bea2e374fca.png?v=1742085724598" alt="Imagem 1">
-      <img src="https://app.clicopy.com.br/uploads/image-1742085777740-0cf7b043-48aa-4505-9c0d-1bf23f3e87fd.png?v=1742085777448" alt="Imagem 2">
-      <img src="https://app.clicopy.com.br/uploads/image-1742085820220-f15bdba5-7ccc-4894-9b9d-b5ec69fe3a49.png?v=1742085819930" alt="Imagem 3">
-      <img src="https://app.clicopy.com.br/uploads/image-1742085748888-bbfcf382-ad51-42e4-b996-854d85b76c1c.png?v=1742085748596" alt="Imagem 4">
-      <img src="https://app.clicopy.com.br/uploads/image-1742085859255-08c523df-befb-4111-8dab-35178c3c14e3.png?v=1742085858961" alt="Imagem 5">
-      <img src="https://app.clicopy.com.br/uploads/image-1742085605825-251fcf67-9d4b-4449-9d0d-ed3bc6cac44b.png?v=1742085605535" alt="Imagem 6">
+      <img src="https://app.clicopy.com.br/uploads/image-1742085724891-143950c3-de50-4c5e-b64d-6bea2e374fca.png?v=1742085724598" alt="">
+      <img src="https://app.clicopy.com.br/uploads/image-1742085777740-0cf7b043-48aa-4505-9c0d-1bf23f3e87fd.png?v=1742085777448" alt="">
+      <img src="https://app.clicopy.com.br/uploads/image-1742085820220-f15bdba5-7ccc-4894-9b9d-b5ec69fe3a49.png?v=1742085819930" alt="">
+      <img src="https://app.clicopy.com.br/uploads/image-1742085748888-bbfcf382-ad51-42e4-b996-854d85b76c1c.png?v=1742085748596" alt="">
+      <img src="https://app.clicopy.com.br/uploads/image-1742085859255-08c523df-befb-4111-8dab-35178c3c14e3.png?v=1742085858961" alt="">
+      <img src="https://app.clicopy.com.br/uploads/image-1742085605825-251fcf67-9d4b-4449-9d0d-ed3bc6cac44b.png?v=1742085605535" alt="">
     </div>
   </section>
 
@@ -216,50 +234,58 @@
   <section class="home-about-container">
     <div class="home-about-grid">
       <div class="home-about-photos">
-        <img src="https://app.clicopy.com.br/uploads/image-1742086523674-5c8cc1a8-0add-4894-bee7-8649e62f804d.png?v=1742086523390" alt="Imagem 1">
-        <img src="https://app.clicopy.com.br/uploads/image-1742086534958-19cc1600-8200-4d18-b52b-276e0fd692f5.png?v=1742086534680" alt="Imagem 2">
-        <img src="https://app.clicopy.com.br/uploads/image-1742086548567-f21a8a76-338f-4117-aff7-340c493b4403.png?v=1742086548302" alt="Imagem 3">
-        <img src="https://app.clicopy.com.br/uploads/image-1742086456097-29db4d39-742a-4ed5-9f03-b22fff14d285.png?v=1742086455813" alt="Imagem 4">
-        <img src="https://app.clicopy.com.br/uploads/image-1742086411084-45be923d-2649-46f8-9a50-a0b03277f2cd.png?v=1742086410807" alt="Imagem 5">
-        <img src="https://app.clicopy.com.br/uploads/image-1742086425670-1f3e7624-0ec1-409c-8daa-2f634ad82a67.png?v=1742086425385" alt="Imagem 6">
+        <img src="https://app.clicopy.com.br/uploads/image-1742086523674-5c8cc1a8-0add-4894-bee7-8649e62f804d.png?v=1742086523390" alt="">
+        <img src="https://app.clicopy.com.br/uploads/image-1742086534958-19cc1600-8200-4d18-b52b-276e0fd692f5.png?v=1742086534680" alt="">
+        <img src="https://app.clicopy.com.br/uploads/image-1742086548567-f21a8a76-338f-4117-aff7-340c493b4403.png?v=1742086548302" alt="">
+        <img src="https://app.clicopy.com.br/uploads/image-1742086456097-29db4d39-742a-4ed5-9f03-b22fff14d285.png?v=1742086455813" alt="">
+        <img src="https://app.clicopy.com.br/uploads/image-1742086411084-45be923d-2649-46f8-9a50-a0b03277f2cd.png?v=1742086410807" alt="">
+        <img src="https://app.clicopy.com.br/uploads/image-1742086425670-1f3e7624-0ec1-409c-8daa-2f634ad82a67.png?v=1742086425385" alt="">
+      </div>
+      <div class="home-about-text">
+        <h5>Escalamos seus produtos com imagens inesquecíveis.</h5>
+        <p>
+          Nascemos da necessidade de apresentar produtos de maneira inesquecível e impactante. Somos um estúdio especializado em criar imagens atraentes e de alta qualidade, utilizando Inteligência Artificial, para ajudar empresas a escalarem suas vendas. Sem a necessidade de fotógrafos ou modelos caros, oferecemos soluções rápidas, acessíveis e personalizadas para e-commerce, marketplaces, anúncios e redes sociais. Nosso objetivo é transformar a forma como seus produtos são vistos, gerando resultados impactantes e duradouros para o seu negócio.
+        </p>
       </div>
     </div>
   </section>
 
   <!-- Tabela de Valores -->
   <section class="section-projects">
-    <table class="services-table">
-      <tr>
-        <th>Serviços</th>
-        <th>a partir</th>
-        <th>Valor</th>
-      </tr>
-      <tr>
-        <td>Imagem com Produto Detalhado</td>
-        <td>a partir</td>
-        <td>$120</td>
-      </tr>
-      <tr>
-        <td>Imagem Com Mais Pessoas</td>
-        <td>a partir</td>
-        <td>$108</td>
-      </tr>
-      <tr>
-        <td>Imagem Editorial</td>
-        <td>a partir</td>
-        <td>$96</td>
-      </tr>
-      <tr>
-        <td>Imagem Ambientada</td>
-        <td>a partir</td>
-        <td>$85</td>
-      </tr>
-      <tr>
-        <td>Imagem Tradicional de Estúdio</td>
-        <td>a partir</td>
-        <td>$72</td>
-      </tr>
-    </table>
+    <div class="wrapper">
+      <table class="services-table">
+        <tr>
+          <th>Serviços</th>
+          <th>a partir</th>
+          <th>Valor</th>
+        </tr>
+        <tr>
+          <td>Imagem com Produto Detalhado</td>
+          <td>a partir</td>
+          <td>$120</td>
+        </tr>
+        <tr>
+          <td>Imagem Com Mais Pessoas</td>
+          <td>a partir</td>
+          <td>$108</td>
+        </tr>
+        <tr>
+          <td>Imagem Editorial</td>
+          <td>a partir</td>
+          <td>$96</td>
+        </tr>
+        <tr>
+          <td>Imagem Ambientada</td>
+          <td>a partir</td>
+          <td>$85</td>
+        </tr>
+        <tr>
+          <td>Imagem Tradicional de Estúdio</td>
+          <td>a partir</td>
+          <td>$72</td>
+        </tr>
+      </table>
+    </div>
   </section>
 
   <!-- Animação de texto -->
@@ -278,26 +304,5 @@
       </div>
     </div>
   </section>
-
-  <!-- Script para o Carrossel -->
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const imagesContainer = document.querySelector('.home-hero-photos-scroll');
-      let images = imagesContainer.querySelectorAll('img');
-      let currentIndex = 0;
-
-      function moveCarousel() {
-        currentIndex++;
-        if (currentIndex >= images.length) {
-          currentIndex = 0;
-        }
-        const offset = -currentIndex * 100 / images.length;
-        imagesContainer.style.transition = 'transform 1s ease';
-        imagesContainer.style.transform = `translateX(${offset}%)`;
-      }
-
-      setInterval(moveCarousel, 3000);
-    });
-  </script>
 </body>
 </html>
