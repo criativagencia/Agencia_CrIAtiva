@@ -23,6 +23,81 @@
       flex-shrink: 0;
     }
     /* Estilo para o Rodapé Animado */
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>CrIAtiva | Imagens Criadas Por Inteligências Artificiais</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    /* Estilo para o Carrossel de Imagens */
+    .home-hero-photos-container {
+      overflow: hidden;
+      width: 100vw;
+    }
+    .home-hero-photos-scroll {
+      display: flex;
+      flex-wrap: nowrap;
+      transition: transform 1s ease-in-out;
+      overflow: hidden;
+    }
+    .home-hero-photos-scroll img {
+      width: 100vw;
+      height: 40vh; /* Altura reduzida para melhor performance */
+      object-fit: cover;
+      flex-shrink: 0;
+    }
+
+    /* Estilo para as 6 Imagens com Texto ao Lado */
+    .home-about-grid {
+      display: flex;
+      align-items: center;
+      gap: 20px; /* Espaçamento entre as imagens e o texto */
+    }
+    .home-about-photos {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 10px;
+      width: 50%; /* Largura das imagens */
+    }
+    .home-about-photos img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      border-radius: 5px;
+    }
+    .home-about-text {
+      width: 50%; /* Largura do texto */
+    }
+    .home-about-text h5 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+    .home-about-text p {
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+    /* Estilo para a Tabela de Valores */
+    .services-table {
+      background-color: black;
+      color: white;
+      width: 100%;
+      margin-top: 20px;
+    }
+    .services-table th,
+    .services-table td {
+      padding: 10px;
+      text-align: left;
+    }
+    .services-table th {
+      font-weight: normal;
+    }
+    .services-table tr:nth-child(even) {
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    /* Estilo para o Rodapé Animado */
     .feedbacks-headline-loop-mask {
       overflow: hidden;
       white-space: nowrap;
@@ -78,30 +153,25 @@
       <div class="wrapper">
         <div class="home-about-grid">
           <div class="home-about-photos">
-            <img src="https://app.clicopy.com.br/uploads/image-1742086523674-5c8cc1a8-0add-4894-bee7-8649e62f804d.png?v=1742086523390" loading="lazy" width="272" alt="" class="home-about-photos-img _1 editable-element lazyload" style="will-change: transform; transform: translate3d(-45.0005%, -99.995%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
-            <img src="https://app.clicopy.com.br/uploads/image-1742086534958-19cc1600-8200-4d18-b52b-276e0fd692f5.png?v=1742086534680" loading="lazy" width="272" alt="" class="home-about-photos-img _2 editable-element lazyload" style="will-change: transform; transform: translate3d(-36.0014%, 80.9869%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
-            <img src="https://app.clicopy.com.br/uploads/image-1742086548567-f21a8a76-338f-4117-aff7-340c493b4403.png?v=1742086548302" loading="lazy" width="272" alt="" class="home-about-photos-img _3 editable-element lazyload" style="will-change: transform; transform: translate3d(-129.992%, 99.985%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
-            <img src="https://app.clicopy.com.br/uploads/image-1742086456097-29db4d39-742a-4ed5-9f03-b22fff14d285.png?v=1742086455813" loading="lazy" width="272" alt="" class="home-about-photos-img _4 editable-element lazyload" style="will-change: transform; transform: translate3d(-129.992%, 99.985%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
-            <img src="https://app.clicopy.com.br/uploads/image-1742086411084-45be923d-2649-46f8-9a50-a0b03277f2cd.png?v=1742086410807" loading="lazy" width="272" alt="" class="home-about-photos-img _5 editable-element lazyload" style="will-change: transform; transform: translate3d(-129.992%, 99.985%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
-            <img src="https://app.clicopy.com.br/uploads/image-1742086425670-1f3e7624-0ec1-409c-8daa-2f634ad82a67.png?v=1742086425385" loading="lazy" width="272" alt="" class="home-about-photos-img _6 editable-element lazyload" style="will-change: transform; transform: translate3d(-129.992%, 99.985%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
+            <img src="https://app.clicopy.com.br/uploads/image-1742086523674-5c8cc1a8-0add-4894-bee7-8649e62f804d.png?v=1742086523390" loading="lazy" width="272" alt="" class="home-about-photos-img _1 editable-element lazyload">
+            <img src="https://app.clicopy.com.br/uploads/image-1742086534958-19cc1600-8200-4d18-b52b-276e0fd692f5.png?v=1742086534680" loading="lazy" width="272" alt="" class="home-about-photos-img _2 editable-element lazyload">
+            <img src="https://app.clicopy.com.br/uploads/image-1742086548567-f21a8a76-338f-4117-aff7-340c493b4403.png?v=1742086548302" loading="lazy" width="272" alt="" class="home-about-photos-img _3 editable-element lazyload">
+            <img src="https://app.clicopy.com.br/uploads/image-1742086456097-29db4d39-742a-4ed5-9f03-b22fff14d285.png?v=1742086455813" loading="lazy" width="272" alt="" class="home-about-photos-img _4 editable-element lazyload">
+            <img src="https://app.clicopy.com.br/uploads/image-1742086411084-45be923d-2649-46f8-9a50-a0b03277f2cd.png?v=1742086410807" loading="lazy" width="272" alt="" class="home-about-photos-img _5 editable-element lazyload">
+            <img src="https://app.clicopy.com.br/uploads/image-1742086425670-1f3e7624-0ec1-409c-8daa-2f634ad82a67.png?v=1742086425385" loading="lazy" width="272" alt="" class="home-about-photos-img _6 editable-element lazyload">
           </div>
+          <div class="home-about-text">
+            <h5>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Escalamos seus produtos com imagens inesquecíveis.&nbsp;</h5>
+            <p class="home-about-description">
+              Nascemos da necessidade de apresentar produtos de maneira inesquecível e impactante. Somos um estúdio especializado em criar imagens atraentes e de alta qualidade, utilizando Inteligência Artificial, para ajudar empresas a escalarem suas vendas. Sem a necessidade de fotógrafos ou modelos caros, oferecemos soluções rápidas, acessíveis e personalizadas para e-commerce, marketplaces, anúncios e redes sociais. Nosso objetivo é transformar a forma como seus produtos são vistos, gerando resultados impactantes e duradouros para o seu negócio.
+            </p>
           </div>
         </div>
-      </section>
-      <section data-w-id="4dd8cba3-49a3-98f0-79da-e681507f538d" class="section-home-about">
-        <div class="home-about-container">
-          <div class="wrapper">
-            <div class="home-about-grid">
-              <div id="w-node-_7cf5ea98-f849-fc95-6340-8085e610068f-037fa01a" class="home-about-photos">
-                <img src="https://app.clicopy.com.br/uploads/image-1742086523674-5c8cc1a8-0add-4894-bee7-8649e62f804d.png?v=1742086523390" loading="lazy" width="272" alt="" class="home-about-photos-img _1 editable-element lazyload" style="will-change: transform; transform: translate3d(-45.0005%, -99.995%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;"><img src="https://app.clicopy.com.br/uploads/image-1742086534958-19cc1600-8200-4d18-b52b-276e0fd692f5.png?v=1742086534680" loading="lazy" width="272" alt="" class="home-about-photos-img _2 editable-element lazyload" style="will-change: transform; transform: translate3d(-36.0014%, 80.9869%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;"><img src="https://app.clicopy.com.br/uploads/image-1742086548567-f21a8a76-338f-4117-aff7-340c493b4403.png?v=1742086548302" loading="lazy" width="272" alt="" class="home-about-photos-img _3 editable-element lazyload" style="will-change: transform; transform: translate3d(-129.992%, 99.985%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;"><img src="https://app.clicopy.com.br/uploads/image-1742086456097-29db4d39-742a-4ed5-9f03-b22fff14d285.png?v=1742086455813" loading="lazy" width="272" alt="" class="home-about-photos-img _4 editable-element lazyload" style="will-change: transform; transform: translate3d(-129.992%, -119.993%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;"><img src="https://app.clicopy.com.br/uploads/image-1742086411084-45be923d-2649-46f8-9a50-a0b03277f2cd.png?v=1742086410807" loading="lazy" width="272" alt="" class="home-about-photos-img _5 editable-element lazyload" style="will-change: transform; transform: translate3d(37.9912%, -139.991%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;"><img src="https://app.clicopy.com.br/uploads/image-1742086425670-1f3e7624-0ec1-409c-8daa-2f634ad82a67.png?v=1742086425385" loading="lazy" width="272" alt="" class="home-about-photos-img _6 editable-element lazyload" style="will-change: transform; transform: translate3d(55.9894%, 99.985%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
-              </div>
-              <div id="w-node-a9d38332-a4ec-618d-b4a4-ffc426f5fea6-037fa01a" class="home-about-text">
-                <h5>
-                  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Escalamos seus produtos com imagens inequecíveis.&nbsp;
-                </h5>
-                <p class="home-about-description">
-                  Nascemos da necessidade de apresentar produtos de maneira inesquecível e impactante. Somos um estúdio especializado em criar imagens atraentes e de alta qualidade, utilizando Inteligência Artificial, para ajudar empresas a escalarem suas vendas. Sem a necessidade de fotógrafos ou modelos caros, oferecemos soluções rápidas, acessíveis e personalizadas para e-commerce, marketplaces, anúncios e redes sociais. Nosso objetivo é transformar a forma como seus produtos são vistos, gerando resultados impactantes e duradouros para o seu negócio.
-               <!-- Tabela de Valores -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Tabela de Valores -->
   <section class="section-projects">
     <div class="wrapper">
       <table class="services-table">
