@@ -2,9 +2,16 @@
 <html data-wf-domain="criativa.com" data-wf-page="66e02a5daed50bb4037fa01a" data-wf-site="66e02a5daed50bb4037fa02f" lang="en" data-wf-locale="en" class="w-mod-js wf-intertight-n3-active wf-intertight-n5-active wf-intertight-n9-active wf-intertight-n4-active wf-intertight-n8-active wf-intertight-n6-active wf-intertight-n7-active wf-active w-mod-js w-mod-ix">
 <head>
   <style>
+    /* Estilo Global */
     .wf-force-outline-none[tabindex="-1"]:focus {
       outline: none;
     }
+    body {
+      margin: 0;
+      font-family: 'Inter Tight', sans-serif;
+      font-weight: 400;
+    }
+
     /* Estilo para o Carrossel de Imagens */
     .home-hero-photos-container {
       overflow: hidden;
@@ -22,30 +29,21 @@
       object-fit: cover;
       flex-shrink: 0;
     }
-    /* Estilo para o Rodapé Animado */
-    <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>CrIAtiva | Imagens Criadas Por Inteligências Artificiais</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <style>
-    /* Estilo para o Carrossel de Imagens */
-    .home-hero-photos-container {
-      overflow: hidden;
-      width: 100vw;
+
+    /* Estilo para o Cabeçalho */
+    .home-hero-text {
+      text-align: center;
+      margin-bottom: 20px;
     }
-    .home-hero-photos-scroll {
-      display: flex;
-      flex-wrap: nowrap;
-      transition: transform 1s ease-in-out;
-      overflow: hidden;
+    .home-hero-description-text p {
+      margin: 0;
+      font-size: 18px;
+      line-height: 1.5;
     }
-    .home-hero-photos-scroll img {
-      width: 100vw;
-      height: 40vh; /* Altura reduzida para melhor performance */
-      object-fit: cover;
-      flex-shrink: 0;
+    .hero-headline {
+      font-size: 48px;
+      font-weight: bold;
+      margin: 0;
     }
 
     /* Estilo para as 6 Imagens com Texto ao Lado */
@@ -84,11 +82,13 @@
       color: white;
       width: 100%;
       margin-top: 20px;
+      border-collapse: collapse;
     }
     .services-table th,
     .services-table td {
       padding: 10px;
       text-align: left;
+      border: 1px solid rgba(255, 255, 255, 0.1);
     }
     .services-table th {
       font-weight: normal;
