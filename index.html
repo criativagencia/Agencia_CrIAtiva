@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html data-wf-domain="criativa.com" data-wf-page="66e02a5daed50bb4037fa01a" data-wf-site="66e02a5daed50bb4037fa02f" lang="en" data-wf-locale="en" class="w-mod-js wf-intertight-n3-active wf-intertight-n5-active wf-intertight-n9-active wf-intertight-n4-active wf-intertight-n8-active wf-intertight-n6-active wf-intertight-n7-active wf-active w-mod-js w-mod-ix">
+<html lang="en">
 <head>
+  <meta charset="utf-8">
+  <title>CrIAtiva | Imagens Criadas Por Inteligências Artificiais</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
     /* Estilo Global */
-    .wf-force-outline-none[tabindex="-1"]:focus {
-      outline: none;
-    }
     body {
       margin: 0;
       font-family: 'Inter Tight', sans-serif;
@@ -16,12 +16,12 @@
     .home-hero-photos-container {
       overflow: hidden;
       width: 100vw;
+      position: relative;
     }
     .home-hero-photos-scroll {
       display: flex;
-      flex-wrap: nowrap;
       transition: transform 1s ease-in-out;
-      overflow: hidden;
+      width: fit-content; /* Garante que o contêiner tenha largura suficiente */
     }
     .home-hero-photos-scroll img {
       width: 100vw;
@@ -226,7 +226,7 @@
   <script>
     document.addEventListener('DOMContentLoaded', function () {
       const imagesContainer = document.querySelector('.home-hero-photos-scroll');
-      let images = imagesContainer.querySelectorAll('img');
+      const images = imagesContainer.querySelectorAll('img');
       let currentIndex = 0;
 
       function moveCarousel() {
@@ -234,9 +234,9 @@
         if (currentIndex >= images.length) {
           currentIndex = 0;
         }
-        const offset = -currentIndex * 100;
+        const offset = -currentIndex * 100; // Move 100% para a esquerda
         imagesContainer.style.transition = 'transform 1s ease-in-out';
-        imagesContainer.style.transform = `translateX(${offset}vw)`;
+        imagesContainer.style.transform = `translateX(${offset}%)`;
       }
 
       setInterval(moveCarousel, 3000);
