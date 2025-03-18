@@ -5,13 +5,6 @@
   <title>CrIAtiva | Imagens Criadas Por Inteligências Artificiais</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
-    /* Estilo Geral */
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-    }
-
     /* Estilo para o Carrossel de Imagens */
     .home-hero-photos-container {
       overflow: hidden;
@@ -30,34 +23,7 @@
       flex-shrink: 0;
     }
 
-    /* Estilo para o Carrossel de Texto */
-    .feedbacks-headline-loop-mask {
-      overflow: hidden;
-      white-space: nowrap;
-      width: 100%;
-    }
-    .feedbacks-headline-loop-container {
-      display: inline-flex;
-      animation: scrollText 10s linear infinite;
-    }
-    .feedbacks-headline-group {
-      padding-right: 20px;
-      font-size: 24px;
-      font-weight: bold;
-      color: #000;
-    }
-    @keyframes scrollText {
-      0% { transform: translateX(100%); }
-      100% { transform: translateX(-100%); }
-    }
-
-    /* Estilo para remover espaços em branco excessivos */
-    .section-projects {
-      margin-top: 0;
-      padding-top: 0;
-    }
-
-    /* Estilo para as 6 imagens com texto ao lado */
+    /* Estilo para as 6 Imagens com Texto ao Lado */
     .home-about-grid {
       display: flex;
       align-items: center;
@@ -87,7 +53,7 @@
       line-height: 1.5;
     }
 
-    /* Estilo para a Tabela de Serviços */
+    /* Estilo para a Tabela de Valores */
     .services-table {
       background-color: black;
       color: white;
@@ -104,6 +70,27 @@
     }
     .services-table tr:nth-child(even) {
       background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    /* Estilo para o Rodapé Animado */
+    .feedbacks-headline-loop-mask {
+      overflow: hidden;
+      white-space: nowrap;
+      width: 100%;
+    }
+    .feedbacks-headline-loop-container {
+      display: inline-flex;
+      animation: scrollText 10s linear infinite;
+    }
+    .feedbacks-headline-group {
+      padding-right: 20px;
+      font-size: 24px;
+      font-weight: bold;
+      color: #000;
+    }
+    @keyframes scrollText {
+      0% { transform: translateX(100%); }
+      100% { transform: translateX(-100%); }
     }
   </style>
 </head>
@@ -197,7 +184,7 @@
     </div>
   </section>
 
-  <!-- Carrossel de Texto -->
+  <!-- Rodapé Animado -->
   <section class="section-feedbacks">
     <div class="feedbacks-headline-loop-mask">
       <div class="feedbacks-headline-loop-container">
