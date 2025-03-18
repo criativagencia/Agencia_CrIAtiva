@@ -66,6 +66,36 @@
       margin-top: 0;
       padding-top: 0;
     }
+
+    /* Estilo para as 6 imagens com texto ao lado */
+    .home-about-grid {
+      display: flex;
+      align-items: center;
+      gap: 20px; /* Espaçamento entre as imagens e o texto */
+    }
+    .home-about-photos {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px; /* Espaçamento entre as imagens */
+      width: 50%; /* Largura das imagens */
+    }
+    .home-about-photos img {
+      width: calc(33.33% - 10px); /* 3 imagens por linha com espaçamento */
+      height: auto;
+      object-fit: cover;
+      border-radius: 5px;
+    }
+    .home-about-text {
+      width: 50%; /* Largura do texto */
+    }
+    .home-about-text h5 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+    .home-about-text p {
+      font-size: 16px;
+      line-height: 1.5;
+    }
   </style>
 </head>
 <body>
@@ -92,6 +122,30 @@
         <img src="https://app.clicopy.com.br/uploads/image-1742085748888-bbfcf382-ad51-42e4-b996-854d85b76c1c.png?v=1742085748596" loading="lazy" alt="">
         <img src="https://app.clicopy.com.br/uploads/image-1742085859255-08c523df-befb-4111-8dab-35178c3c14e3.png?v=1742085858961" loading="lazy" alt="">
         <img src="https://app.clicopy.com.br/uploads/image-1742085605825-251fcf67-9d4b-4449-9d0d-ed3bc6cac44b.png?v=1742085605535" loading="lazy" alt="">
+      </div>
+    </div>
+  </section>
+
+  <!-- Seção de 6 Imagens com Texto ao Lado -->
+  <section class="section-home-about">
+    <div class="home-about-container">
+      <div class="wrapper">
+        <div class="home-about-grid">
+          <div class="home-about-photos">
+            <img src="https://app.clicopy.com.br/uploads/image-1742086523674-5c8cc1a8-0add-4894-bee7-8649e62f804d.png?v=1742086523390" loading="lazy" alt="">
+            <img src="https://app.clicopy.com.br/uploads/image-1742086534958-19cc1600-8200-4d18-b52b-276e0fd692f5.png?v=1742086534680" loading="lazy" alt="">
+            <img src="https://app.clicopy.com.br/uploads/image-1742086548567-f21a8a76-338f-4117-aff7-340c493b4403.png?v=1742086548302" loading="lazy" alt="">
+            <img src="https://app.clicopy.com.br/uploads/image-1742086456097-29db4d39-742a-4ed5-9f03-b22fff14d285.png?v=1742086455813" loading="lazy" alt="">
+            <img src="https://app.clicopy.com.br/uploads/image-1742086411084-45be923d-2649-46f8-9a50-a0b03277f2cd.png?v=1742086410807" loading="lazy" alt="">
+            <img src="https://app.clicopy.com.br/uploads/image-1742086425670-1f3e7624-0ec1-409c-8daa-2f634ad82a67.png?v=1742086425385" loading="lazy" alt="">
+          </div>
+          <div class="home-about-text">
+            <h5>Escalamos seus produtos com imagens inesquecíveis.</h5>
+            <p class="home-about-description">
+              Nascemos da necessidade de apresentar produtos de maneira inesquecível e impactante. Somos um estúdio especializado em criar imagens atraentes e de alta qualidade, utilizando Inteligência Artificial, para ajudar empresas a escalarem suas vendas. Sem a necessidade de fotógrafos ou modelos caros, oferecemos soluções rápidas, acessíveis e personalizadas para e-commerce, marketplaces, anúncios e redes sociais. Nosso objetivo é transformar a forma como seus produtos são vistos, gerando resultados impactantes e duradouros para o seu negócio.
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
