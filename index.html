@@ -1,238 +1,297 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
   <title>CrIAtiva | Imagens Criadas Por Inteligências Artificiais</title>
-  <link href="https://fonts.googleapis.com/css?family=Inter+Tight:300,regular,500,600,700,800,900" rel="stylesheet">
-  <link href="https://cdn.prod.website-files.com/66e02a5daed50bb4037fa02f/66e2aed99dcba1bda102deaf_Favicon_32.png" rel="shortcut icon" type="image/x-icon">
   <style>
+    /* Impede rolagem lateral da página */
     body {
-      font-family: 'Inter Tight', sans-serif;
       margin: 0;
-      padding: 0;
+      font-family: 'Inter Tight', sans-serif;
+      font-weight: 400;
       overflow-x: hidden; /* Impede rolagem lateral */
     }
 
-    .nav {
-      display: flex;
-      justify-content: space-between;
-      padding: 20px;
-      background-color: #fff;
-    }
-
-    .brand-mobile-text {
-      font-size: 32px;
-      font-weight: bold;
-    }
-
-    .home-hero {
+    /* Cabeçalho */
+    .header {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      height: 500px;
-      padding: 20px;
-      background-color: #f0f0f0;
+      padding: 20px 30px;
+      background-color: #fff;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      position: fixed;
+      width: 100%;
+      z-index: 9999;
     }
 
-    .home-hero-text {
-      width: 50%;
+    .header .brand {
       font-size: 40px;
       font-weight: bold;
-    }
-
-    .home-hero-description-text p {
-      font-size: 18px;
-    }
-
-    .home-hero-photos-container {
+      color: #000;
       display: flex;
+      align-items: center;
+    }
+
+    .header .brand p {
+      margin: 0;
+      font-size: 40px;
+    }
+
+    .header .brand .dot {
+      background-color: red;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      margin-left: 5px;
+    }
+
+    /* Menu de navegação */
+    .nav-menu {
+      display: flex;
+      gap: 30px;
+      font-size: 16px;
+    }
+
+    .nav-menu a {
+      text-decoration: none;
+      color: #000;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+
+    .nav-menu a:hover {
+      color: #ff5722;
+    }
+
+    /* Carrossel de Imagens */
+    .home-hero-photos-container {
       overflow: hidden;
-      height: 100%;
+      width: 100%;
+      margin-top: 80px;
     }
 
     .home-hero-photos-scroll {
       display: flex;
-      animation: scrollImages 30s linear infinite;
+      animation: carrossel 30s linear infinite;
     }
 
     .home-hero-photos-scroll img {
-      width: 200px;
-      height: 250px;
+      width: 33vw; /* Ajustando o tamanho das imagens */
+      height: auto;
       object-fit: cover;
-      margin-right: 10px;
+      flex-shrink: 0;
     }
 
-    @keyframes scrollImages {
-      0% {
-        transform: translateX(0);
-      }
-      100% {
-        transform: translateX(-100%);
-      }
+    @keyframes carrossel {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-100%); }
     }
 
-    .home-about-container {
-      display: flex;
-      justify-content: space-between;
-      margin: 40px 20px;
-    }
-
-    .home-about-photos {
-      width: 30%;
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      gap: 10px;
-    }
-
-    .home-about-text {
-      width: 65%;
-      font-size: 16px;
-    }
-
-    .services-table {
-      width: 100%;
-      margin-top: 40px;
-      border-collapse: collapse;
-    }
-
-    .services-table th, .services-table td {
-      padding: 15px;
-      border: 1px solid #ddd;
-      text-align: left;
-    }
-
-    .section-feedbacks {
-      background-color: #f0f0f0;
-      padding: 20px;
-    }
-
-    .feedbacks-headline-loop-mask {
-      overflow: hidden;
-    }
-
+    /* Animação para os textos "Envie uma Mensagem" */
     .feedbacks-headline-loop-container {
-      display: flex;
+      display: inline-flex;
       animation: loopText 20s linear infinite;
     }
 
-    .feedbacks-headline-group {
-      padding: 20px;
-      font-size: 24px;
-      font-weight: bold;
+    @keyframes loopText {
+      0% { transform: translateX(100%); }
+      100% { transform: translateX(-100%); }
     }
 
-    @keyframes loopText {
-      0% {
-        transform: translateX(0);
+    .feedbacks-headline-text {
+      padding-right: 40px;
+      font-size: 24px;
+      font-weight: bold;
+      color: #000;
+    }
+
+    /* Seção das 6 Imagens */
+    .home-about-container {
+      margin-top: 80px;
+      padding: 20px;
+    }
+
+    .home-about-grid {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    .home-about-photos img {
+      width: 32%; /* Ajustando as imagens para ficarem pequenas */
+      height: auto;
+      object-fit: cover;
+      border-radius: 5px;
+    }
+
+    .home-about-text {
+      width: 100%;
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .home-about-text h5 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .home-about-text p {
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+    /* Tabela de Valores */
+    .services-table {
+      background-color: black;
+      color: white;
+      width: 100%;
+      margin-top: 20px;
+      border-collapse: collapse;
+    }
+
+    .services-table th,
+    .services-table td {
+      padding: 10px;
+      text-align: left;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .services-table th {
+      font-weight: normal;
+    }
+
+    .services-table tr:nth-child(even) {
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    /* Responsividade */
+    @media (max-width: 768px) {
+      .header .brand p {
+        font-size: 32px;
       }
-      100% {
-        transform: translateX(-100%);
+
+      .nav-menu {
+        font-size: 14px;
+        gap: 15px;
+      }
+
+      .home-hero-photos-scroll img {
+        height: 40vh;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .header .brand p {
+        font-size: 28px;
+      }
+
+      .home-hero-photos-scroll img {
+        height: 35vh;
+      }
+
+      .home-about-grid {
+        flex-direction: column;
+        gap: 10px;
       }
     }
   </style>
 </head>
 <body>
-  <div class="nav">
-    <div class="brand-mobile">
-      <p class="brand-mobile-text">CrIAtiva</p>
+  <!-- Cabeçalho -->
+  <header class="header">
+    <div class="brand">
+      <p>CrIAtiva</p>
+      <div class="dot"></div>
     </div>
-    <nav>
-      <a href="#">crIAtiva</a>
+    <nav class="nav-menu">
+      <a href="#">Editoriais</a>
+      <a href="#">Ambientadas</a>
+      <a href="#">Estúdio</a>
       <a href="#">+55 47 99634-8114</a>
       <a href="#">@cr_ia_tiva</a>
       <a href="#">About</a>
-      <a href="#">Blog</a>
+      <a href="#">Brasil</a>
       <a href="#">Contact</a>
     </nav>
-  </div>
+  </header>
 
-  <section class="home-hero">
-    <div class="home-hero-text">
-      <p>Agência de Imagens Criadas por IA</p>
-      <h1>CrIAtiva</h1>
-      <div class="home-hero-description-text">
-        <p><span style="color: inherit;">Criadas</span><span style="color: inherit;"> por IA</span></p>
-      </div>
-    </div>
-
-    <div class="home-hero-photos-container">
-      <div class="home-hero-photos-scroll">
-        <img src="image1.jpg" alt="Imagem 1">
-        <img src="image2.jpg" alt="Imagem 2">
-        <img src="image3.jpg" alt="Imagem 3">
-        <img src="image4.jpg" alt="Imagem 4">
-        <img src="image5.jpg" alt="Imagem 5">
-        <img src="image6.jpg" alt="Imagem 6">
-      </div>
+  <!-- Carrossel de Imagens -->
+  <section class="home-hero-photos-container">
+    <div class="home-hero-photos-scroll">
+      <img src="https://app.clicopy.com.br/uploads/image-1742085724891-143950c3-de50-4c5e-b64d-6bea2e374fca.png?v=1742085724598" alt="">
+      <img src="https://app.clicopy.com.br/uploads/image-1742085777740-0cf7b043-48aa-4505-9c0d-1bf23f3e87fd.png?v=1742085777448" alt="">
+      <img src="https://app.clicopy.com.br/uploads/image-1742085820220-f15bdba5-7ccc-4894-9b9d-b5ec69fe3a49.png?v=1742085819930" alt="">
+      <img src="https://app.clicopy.com.br/uploads/image-1742085748888-bbfcf382-ad51-42e4-b996-854d85b76c1c.png?v=1742085748596" alt="">
+      <img src="https://app.clicopy.com.br/uploads/image-1742085859255-08c523df-befb-4111-8dab-35178c3c14e3.png?v=1742085858961" alt="">
+      <img src="https://app.clicopy.com.br/uploads/image-1742085605825-251fcf67-9d4b-4449-9d0d-ed3bc6cac44b.png?v=1742085605535" alt="">
     </div>
   </section>
 
+  <!-- Seção das 6 Imagens -->
   <section class="home-about-container">
-    <div class="home-about-photos">
-      <img src="https://via.placeholder.com/150" alt="Produto 1">
-      <img src="https://via.placeholder.com/150" alt="Produto 2">
-      <img src="https://via.placeholder.com/150" alt="Produto 3">
-      <img src="https://via.placeholder.com/150" alt="Produto 4">
-      <img src="https://via.placeholder.com/150" alt="Produto 5">
-      <img src="https://via.placeholder.com/150" alt="Produto 6">
-    </div>
-
-    <div class="home-about-text">
-      <h5>Escalamos seus produtos com imagens inesquecíveis.</h5>
-      <p>
-        Nascemos da necessidade de apresentar produtos de maneira inesquecível e impactante. Somos um estúdio especializado em criar imagens atraentes e de alta qualidade, utilizando Inteligência Artificial, para ajudar empresas a escalarem suas vendas. Sem a necessidade de fotógrafos ou modelos caros, oferecemos soluções rápidas, acessíveis e personalizadas para e-commerce, marketplaces, anúncios e redes sociais. Nosso objetivo é transformar a forma como seus produtos são vistos, gerando resultados impactantes e duradouros para o seu negócio.
-      </p>
+    <div class="home-about-grid">
+      <div class="home-about-photos">
+        <img src="https://app.clicopy.com.br/uploads/image-1742086523674-5c8cc1a8-0add-4894-bee7-8649e62f804d.png?v=1742086523390" alt="">
+        <img src="https://app.clicopy.com.br/uploads/image-1742086534958-19cc1600-8200-4d18-b52b-276e0fd692f5.png?v=1742086534680" alt="">
+        <img src="https://app.clicopy.com.br/uploads/image-1742086548567-f21a8a76-338f-4117-aff7-340c493b4403.png?v=1742086548302" alt="">
+        <img src="https://app.clicopy.com.br/uploads/image-1742086456097-29db4d39-742a-4ed5-9f03-b22fff14d285.png?v=1742086455813" alt="">
+        <img src="https://app.clicopy.com.br/uploads/image-1742086411084-45be923d-2649-46f8-9a50-a0b03277f2cd.png?v=1742086410807" alt="">
+        <img src="https://app.clicopy.com.br/uploads/image-1742086425670-1f3e7624-0ec1-409c-8daa-2f634ad82a67.png?v=1742086425385" alt="">
+      </div>
+      <div class="home-about-text">
+        <h5>Escalamos seus produtos com imagens inesquecíveis.</h5>
+        <p>
+          Nascemos da necessidade de apresentar produtos de maneira inesquecível e impactante. Somos um estúdio especializado em criar imagens atraentes e de alta qualidade, utilizando Inteligência Artificial, para ajudar empresas a escalarem suas vendas. Sem a necessidade de fotógrafos ou modelos caros, oferecemos soluções rápidas, acessíveis e personalizadas para e-commerce, marketplaces, anúncios e redes sociais. Nosso objetivo é transformar a forma como seus produtos são vistos, gerando resultados impactantes e duradouros para o seu negócio.
+        </p>
+      </div>
     </div>
   </section>
 
-  <section class="services-table">
-    <table>
-      <tr>
-        <th>Serviços</th>
-        <th>a partir</th>
-        <th>Valor</th>
-      </tr>
-      <tr>
-        <td>Imagem com Produto Detalhado</td>
-        <td>a partir</td>
-        <td>$120</td>
-      </tr>
-      <tr>
-        <td>Imagem Com Mais Pessoas</td>
-        <td>a partir</td>
-        <td>$108</td>
-      </tr>
-      <tr>
-        <td>Imagem Editorial</td>
-        <td>a partir</td>
-        <td>$96</td>
-      </tr>
-      <tr>
-        <td>Imagem Ambientada</td>
-        <td>a partir</td>
-        <td>$85</td>
-      </tr>
-      <tr>
-        <td>Imagem Tradicional de Estúdio</td>
-        <td>a partir</td>
-        <td>$72</td>
-      </tr>
-    </table>
+  <!-- Tabela de Valores -->
+  <section class="section-projects">
+    <div class="wrapper">
+      <table class="services-table">
+        <tr>
+          <th>Serviços</th>
+          <th>a partir</th>
+          <th>Valor</th>
+        </tr>
+        <tr>
+          <td>Imagem com Produto Detalhado</td>
+          <td>a partir</td>
+          <td>$120</td>
+        </tr>
+        <tr>
+          <td>Imagem Com Mais Pessoas</td>
+          <td>a partir</td>
+          <td>$108</td>
+        </tr>
+        <tr>
+          <td>Imagem Editorial</td>
+          <td>a partir</td>
+          <td>$96</td>
+        </tr>
+        <tr>
+          <td>Imagem Ambientada</td>
+          <td>a partir</td>
+          <td>$85</td>
+        </tr>
+        <tr>
+          <td>Imagem Tradicional de Estúdio</td>
+          <td>a partir</td>
+          <td>$72</td>
+        </tr>
+      </table>
+    </div>
   </section>
 
+  <!-- Animação de texto -->
   <section class="section-feedbacks">
     <div class="feedbacks-headline-loop-mask">
       <div class="feedbacks-headline-loop-container">
-        <div class="feedbacks-headline-group">
-          <h3 class="feedbacks-headline-text">Envie uma Mensagem</h3>
-        </div>
-        <div class="feedbacks-headline-group">
-          <h3 class="feedbacks-headline-text">Envie uma Mensagem</h3>
-        </div>
-        <div class="feedbacks-headline-group">
-          <h3 class="feedbacks-headline-text">Envie uma Mensagem</h3>
-        </div>
         <div class="feedbacks-headline-group">
           <h3 class="feedbacks-headline-text">Envie uma Mensagem</h3>
         </div>
