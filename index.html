@@ -1,11 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html data-wf-domain="criativa.com" data-wf-page="66e02a5daed50bb4037fa01a" data-wf-site="66e02a5daed50bb4037fa02f" lang="en" data-wf-locale="en" class="w-mod-js wf-intertight-n3-active wf-intertight-n5-active wf-intertight-n9-active wf-intertight-n4-active wf-intertight-n8-active wf-intertight-n6-active wf-intertight-n7-active wf-active w-mod-js w-mod-ix">
 <head>
   <meta charset="utf-8">
   <title>CrIAtiva | Imagens Criadas Por Inteligências Artificiais</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
     /* Estilo Global */
+    .wf-force-outline-none[tabindex="-1"]:focus {
+      outline: none;
+    }
     body {
       margin: 0;
       font-family: 'Inter Tight', sans-serif;
@@ -13,26 +16,19 @@
     }
 
     /* Estilo para o Cabeçalho */
-    .header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px;
+    .home-hero-text {
+      text-align: center;
+      margin-bottom: 20px;
     }
-    .header-left {
-      display: flex;
-      align-items: center;
+    .home-hero-description-text p {
+      margin: 0;
+      font-size: 18px;
+      line-height: 1.5;
     }
-    .header-left img {
-      width: 50px;
-      height: auto;
-    }
-    .header-right {
-      display: flex;
-      align-items: center;
-    }
-    .header-right div {
-      margin-left: 30px;
+    .hero-headline {
+      font-size: 48px;
+      font-weight: bold;
+      margin: 0;
     }
 
     /* Estilo para o Carrossel de Imagens */
@@ -126,31 +122,20 @@
   </style>
 </head>
 <body>
-  <!-- Cabeçalho -->
-  <div class="header">
-    <div class="header-left">
-      <img src="https://app.clicopy.com.br/uploads/image-1742086523674-5c8cc1a8-0add-4894-bee7-8649e62f804d.png?v=1742086523390" alt="Logo">
-      <div>
-        <p>+55 47 99634-8114</p>
-        <p>@cr_ia_tiva</p>
-      </div>
-    </div>
-    <div class="header-right">
-      <div>
-        <p>Brasil</p>
-        <p>About</p>
-      </div>
-      <div>
-        <p>Contact</p>
-      </div>
-    </div>
-  </div>
-
   <!-- Seção do Carrossel de Imagens -->
   <section class="section-home-hero">
     <div class="wrapper">
-      <div class="home-hero-headline">
-        <h1 class="text-h1-extra hero-headline">CrIAtiva</h1>
+      <div class="home-hero-text">
+        <div class="home-hero-description">
+          <div class="home-hero-description-text">
+            <p>Agência de Imagens</p>
+            <p><span style="color: inherit;">Criadas</span><span style="color: inherit;">&nbsp;por IA</span></p>
+          </div>
+        </div>
+        <div class="home-hero-headline">
+          <h1 class="text-h1-extra hero-headline">CrIAtiva</h1>
+          <img src="https://cdn.prod.website-files.com/66e02a5daed50bb4037fa02f/66e18d6b9a12f4c1d2a7778d_copyright-icon.svg" loading="lazy" alt="" class="home-hero-headline-icon">
+        </div>
       </div>
     </div>
     <div class="home-hero-photos-container">
@@ -257,7 +242,7 @@
         imagesContainer.style.transform = `translateX(${offset}%)`;
       }
 
-      setInterval(moveCarousel, 1000); // Troca de imagem a cada 1 segundo
+      setInterval(moveCarousel, 3000);
     });
   </script>
 </body>
