@@ -12,45 +12,6 @@
       padding: 0;
     }
 
-    /* Estilo para o Header */
-    .header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px;
-      background-color: #fff;
-    }
-    .header-left {
-      display: flex;
-      align-items: center;
-    }
-    .header-right {
-      display: flex;
-      align-items: center;
-    }
-    .header-contact {
-      margin-right: 20px;
-    }
-    .header-social {
-      margin-right: 20px;
-    }
-    .header-menu {
-      display: flex;
-      align-items: center;
-    }
-    .header-menu a {
-      margin-left: 20px;
-      text-decoration: none;
-      color: #000;
-    }
-
-    /* Estilo para o Logotipo Vertical */
-    .logo-vertical {
-      writing-mode: vertical-lr;
-      transform: rotate(180deg);
-      margin-right: 20px;
-    }
-
     /* Estilo para o Carrossel de Imagens */
     .home-hero-photos-container {
       overflow: hidden;
@@ -95,30 +56,58 @@
       margin-top: 0;
       padding-top: 0;
     }
+
+    /* Estilo para as 6 imagens com texto ao lado */
+    .home-about-grid {
+      display: flex;
+      align-items: center;
+      gap: 20px; /* Espaçamento entre as imagens e o texto */
+    }
+    .home-about-photos {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 10px;
+      width: 50%; /* Largura das imagens */
+    }
+    .home-about-photos img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      border-radius: 5px;
+    }
+    .home-about-text {
+      width: 50%; /* Largura do texto */
+    }
+    .home-about-text h5 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+    .home-about-text p {
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+    /* Estilo para a Tabela de Serviços */
+    .services-table {
+      background-color: black;
+      color: white;
+      width: 100%;
+      margin-top: 20px;
+    }
+    .services-table th,
+    .services-table td {
+      padding: 10px;
+      text-align: left;
+    }
+    .services-table th {
+      font-weight: normal;
+    }
+    .services-table tr:nth-child(even) {
+      background-color: rgba(255, 255, 255, 0.1);
+    }
   </style>
 </head>
 <body>
-  <!-- Header -->
-  <div class="header">
-    <div class="header-left">
-      <div class="logo-vertical">
-        <p>Agência de Imagens<br>Criadas por IA</p>
-      </div>
-      <div class="header-contact">
-        <p>+55 47 99634-8114</p>
-      </div>
-      <div class="header-social">
-        <p>@cr_ia_tiva</p>
-      </div>
-    </div>
-    <div class="header-right">
-      <div class="header-menu">
-        <a href="#">Brasil</a>
-        <a href="#">Contact</a>
-      </div>
-    </div>
-  </div>
-
   <!-- Seção do Carrossel de Imagens -->
   <section class="section-home-hero">
     <div class="wrapper">
@@ -146,79 +135,65 @@
     </div>
   </section>
 
-  <!-- Tabela de Valores -->
-  <section class="section-projects">
-    <div class="wrapper">
-      <h2>Nossos Serviços</h2>
-      <div class="w-dyn-list">
-        <div role="list" class="w-dyn-items">
-          <div role="listitem" class="w-dyn-item">
-            <div class="services-el">
-              <div class="services-el-name">
-                <h6>Imagem com Produto Detalhado</h6>
-              </div>
-              <div class="services-el-time">
-                <h6>a partir</h6>
-              </div>
-              <div class="services-el-price">
-                <h6>$120</h6>
-              </div>
-            </div>
+  <!-- Seção de 6 Imagens com Texto ao Lado -->
+  <section class="section-home-about">
+    <div class="home-about-container">
+      <div class="wrapper">
+        <div class="home-about-grid">
+          <div class="home-about-photos">
+            <img src="https://app.clicopy.com.br/uploads/image-1742086523674-5c8cc1a8-0add-4894-bee7-8649e62f804d.png?v=1742086523390" loading="lazy" alt="">
+            <img src="https://app.clicopy.com.br/uploads/image-1742086534958-19cc1600-8200-4d18-b52b-276e0fd692f5.png?v=1742086534680" loading="lazy" alt="">
+            <img src="https://app.clicopy.com.br/uploads/image-1742086548567-f21a8a76-338f-4117-aff7-340c493b4403.png?v=1742086548302" loading="lazy" alt="">
+            <img src="https://app.clicopy.com.br/uploads/image-1742086456097-29db4d39-742a-4ed5-9f03-b22fff14d285.png?v=1742086455813" loading="lazy" alt="">
+            <img src="https://app.clicopy.com.br/uploads/image-1742086411084-45be923d-2649-46f8-9a50-a0b03277f2cd.png?v=1742086410807" loading="lazy" alt="">
+            <img src="https://app.clicopy.com.br/uploads/image-1742086425670-1f3e7624-0ec1-409c-8daa-2f634ad82a67.png?v=1742086425385" loading="lazy" alt="">
           </div>
-          <div role="listitem" class="w-dyn-item">
-            <div class="services-el">
-              <div class="services-el-name">
-                <h6>Imagem Com Mais Pessoas</h6>
-              </div>
-              <div class="services-el-time">
-                <h6>a partir</h6>
-              </div>
-              <div class="services-el-price">
-                <h6>$108</h6>
-              </div>
-            </div>
-          </div>
-          <div role="listitem" class="w-dyn-item">
-            <div class="services-el">
-              <div class="services-el-name">
-                <h6>Imagem Editorial</h6>
-              </div>
-              <div class="services-el-time">
-                <h6>a partir</h6>
-              </div>
-              <div class="services-el-price">
-                <h6>$96</h6>
-              </div>
-            </div>
-          </div>
-          <div role="listitem" class="w-dyn-item">
-            <div class="services-el">
-              <div class="services-el-name">
-                <h6>Imagem Ambientada</h6>
-              </div>
-              <div class="services-el-time">
-                <h6>a partir</h6>
-              </div>
-              <div class="services-el-price">
-                <h6>$85</h6>
-              </div>
-            </div>
-          </div>
-          <div role="listitem" class="w-dyn-item">
-            <div class="services-el">
-              <div class="services-el-name">
-                <h6>Imagem Tradicional de Estúdio</h6>
-              </div>
-              <div class="services-el-time">
-                <h6>a partir</h6>
-              </div>
-              <div class="services-el-price">
-                <h6>$72</h6>
-              </div>
-            </div>
+          <div class="home-about-text">
+            <h5>Escalamos seus produtos com imagens inesquecíveis.</h5>
+            <p class="home-about-description">
+              Nascemos da necessidade de apresentar produtos de maneira inesquecível e impactante. Somos um estúdio especializado em criar imagens atraentes e de alta qualidade, utilizando Inteligência Artificial, para ajudar empresas a escalarem suas vendas. Sem a necessidade de fotógrafos ou modelos caros, oferecemos soluções rápidas, acessíveis e personalizadas para e-commerce, marketplaces, anúncios e redes sociais. Nosso objetivo é transformar a forma como seus produtos são vistos, gerando resultados impactantes e duradouros para o seu negócio.
+            </p>
           </div>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- Tabela de Valores -->
+  <section class="section-projects">
+    <div class="wrapper">
+      <table class="services-table">
+        <tr>
+          <th>Serviços</th>
+          <th>a partir</th>
+          <th>Valor</th>
+        </tr>
+        <tr>
+          <td>Imagem com Produto Detalhado</td>
+          <td>a partir</td>
+          <td>$120</td>
+        </tr>
+        <tr>
+          <td>Imagem Com Mais Pessoas</td>
+          <td>a partir</td>
+          <td>$108</td>
+        </tr>
+        <tr>
+          <td>Imagem Editorial</td>
+          <td>a partir</td>
+          <td>$96</td>
+        </tr>
+        <tr>
+          <td>Imagem Ambientada</td>
+          <td>a partir</td>
+          <td>$85</td>
+        </tr>
+        <tr>
+          <td>Imagem Tradicional de Estúdio</td>
+          <td>a partir</td>
+          <td>$72</td>
+        </tr>
+      </table>
     </div>
   </section>
 
